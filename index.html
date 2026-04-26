@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<div class="topbar">
+<div class="topbar" id="topbar" style="display:none">
   <div class="tb-left">
     <span class="tb-wordmark">IDS Media</span>
     <div>
@@ -23,10 +23,10 @@
   </div>
 </div>
 
-<div class="main">
+<div class="main" id="main-content" style="display:none">
   <div id="banner-area"></div>
   <div class="stats" id="stats-wrap" style="display:none">
-    <div class="stat"><div class="stat-label">Total jobs</div><div class="stat-val" id="s-total">0</div></div>
+    <div class="stat"><div class="stat-label">Total</div><div class="stat-val" id="s-total">0</div></div>
     <div class="stat"><div class="stat-label">Saved</div><div class="stat-val green" id="s-done">0</div></div>
     <div class="stat"><div class="stat-label">Pending</div><div class="stat-val" id="s-pending">0</div></div>
     <div class="stat"><div class="stat-label">Errors</div><div class="stat-val red" id="s-err">0</div></div>
@@ -37,7 +37,7 @@
   </div>
   <div class="loading-wrap" id="loading-wrap">
     <div class="spinner"></div>
-    <div>Loading jobs…</div>
+    <div>Loading…</div>
   </div>
   <div id="jobs-area" style="display:none">
     <div id="jobs-container"></div>
@@ -55,12 +55,14 @@
 <div class="overlay" id="overlay">
   <div class="overlay-box">
     <div class="overlay-title" id="ov-title">Saving…</div>
-    <div class="overlay-sub"   id="ov-sub">Please wait.</div>
+    <div class="overlay-sub" id="ov-sub">Please wait.</div>
     <div class="overlay-prog"><div class="overlay-fill" id="ov-fill" style="width:0%"></div></div>
   </div>
 </div>
 
-<script src="https://live.zwidgets.com/js-sdk/1.0.5/ZohoEmbeddedAppSDK.min.js"></script>
+<!-- Zoho CRM JS SDK - correct URL for CRM widgets -->
+<script src="https://js.zohostatic.com/crm/v2/crmsdk/ZohoCRMWidgetToolkit.js"></script>
 <script src="app.js"></script>
+
 </body>
 </html>
