@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDS Jobs Widget</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar" id="topbar" style="display:none">
+  <div class="tb-left">
+    <span class="tb-wordmark">IDS Media</span>
+    <div>
+      <div class="tb-name" id="tb-name">Loading…</div>
+      <div class="tb-fwc"  id="tb-fwc">—</div>
+    </div>
+  </div>
+  <div class="tb-right">
+    <button onclick="expandAll()">Expand all</button>
+    <button onclick="collapseAll()">Collapse all</button>
+    <button class="primary" id="btn-save-all" onclick="saveAll()" disabled>Save all</button>
+  </div>
+</div>
+
+<div class="main" id="main-content" style="display:none">
+  <div id="banner-area"></div>
+  <div class="stats" id="stats-wrap" style="display:none">
+    <div class="stat"><div class="stat-label">Total jobs</div><div class="stat-val" id="s-total">0</div></div>
+    <div class="stat"><div class="stat-label">Saved</div><div class="stat-val green" id="s-done">0</div></div>
+    <div class="stat"><div class="stat-label">Pending</div><div class="stat-val" id="s-pending">0</div></div>
+    <div class="stat"><div class="stat-label">Errors</div><div class="stat-val red" id="s-err">0</div></div>
+  </div>
+  <div class="prog-wrap" id="prog-wrap" style="display:none">
+    <div class="prog-row"><span>Progress</span><span id="prog-txt">0 / 0</span></div>
+    <div class="prog-track"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
+  </div>
+  <div class="loading-wrap" id="loading-wrap">
+    <div class="spinner"></div>
+    <div>Loading jobs…</div>
+  </div>
+  <div id="jobs-area" style="display:none">
+    <div id="jobs-container"></div>
+  </div>
+</div>
+
+<div class="savebar" id="savebar" style="display:none">
+  <div class="savebar-info"><strong id="sab-count">0</strong> job(s) with unsaved changes</div>
+  <div class="savebar-actions">
+    <button onclick="resetAll()">Reset</button>
+    <button class="primary" id="sab-btn" onclick="saveAll()" disabled>Save all</button>
+  </div>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="overlay-box">
+    <div class="overlay-title" id="ov-title">Saving…</div>
+    <div class="overlay-sub"   id="ov-sub">Please wait.</div>
+    <div class="overlay-prog"><div class="overlay-fill" id="ov-fill" style="width:0%"></div></div>
+  </div>
+</div>
+
+<!-- Zoho CRM JS SDK (installed by ZET CLI into node_modules) -->
+<script src="app.js"></script>
+
+</body>
+</html>

@@ -403,3 +403,85 @@ select   { cursor: pointer; }
   border-radius: 99px;
   transition: width 0.25s ease;
 }
+
+/* ── TABS ── */
+.tab-bar {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid #e5e1da;
+  padding: 0 16px;
+  background: #faf9f7;
+}
+.tab-btn {
+  font-size: 12px;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #7a746c;
+  padding: 10px 14px 8px;
+  border-radius: 0;
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+  margin-bottom: -1px;
+}
+.tab-btn:hover { color: #1a1816; background: transparent; border-color: #d0ccc5; }
+.tab-btn.active { color: #1a1816; border-bottom-color: #1a1816; }
+
+/* ── CRM SECTION ── */
+.crm-section {
+  padding: 14px 16px 4px;
+  border-bottom: 1px solid #f0ede8;
+}
+.crm-section:last-child { border-bottom: none; }
+.crm-section-title {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: #7a746c;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.editable-section .crm-section-title { color: #1a1816; }
+.crm-fields-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  margin-bottom: 10px;
+}
+.crm-field { display: flex; flex-direction: column; gap: 3px; }
+.crm-label {
+  font-size: 10.5px;
+  color: #9c958c;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.crm-value {
+  font-size: 13px;
+  color: #1a1816;
+  min-height: 20px;
+}
+.crm-link { color: #2563eb; }
+.ro-empty { color: #d0ccc5; }
+
+/* editable field highlight */
+.crm-field.editable .crm-label { color: #5c574f; }
+.edit-badge {
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  background: #dbeafe;
+  color: #1e40af;
+  border-radius: 3px;
+  padding: 1px 5px;
+}
+.fwc-tag { background: #f3f4f6 !important; color: #6b7280 !important; }
+
+/* tab content padding */
+.tab-content { padding-bottom: 6px; }
